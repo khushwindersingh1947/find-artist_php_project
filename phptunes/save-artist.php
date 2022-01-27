@@ -22,7 +22,7 @@
     //-> php operator
     $cmd = $db->prepare($sql);
     $cmd->bindParam(':name',$name,PDO::PARAM_STR,100);//to get saved from hackers convert variable into string
-    $cmd->bindParam(':genreId',$genreId,PDO::PARAM_STR,100);//to get saved from hackers convert variable into string
+    $cmd->bindParam(':genreId',$genreId,PDO::PARAM_INT);//to get saved from hackers convert variable into string
 
     //execute the save command
     $cmd->execute();
